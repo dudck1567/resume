@@ -1,0 +1,134 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Sacramento&family=Lobster&family=Noto+Sans+KR&display=swap');
+/* font-family: 'Sacramento', cursive; 로고 글씨 */
+/* font-family: 'Lobster', cursive; 메인 글씨 */
+/* font-family: 'Noto Sans', sans-serif; 영문 기본 글씨 */
+/* font-family: 'Noto Sans KR', sans-serif; 한글 기본 글씨 */
+.row{ max-width: 1200px; margin:0px auto; padding: 0 10px;}
+#header, #section, #footer{font-family: 'Noto Sans', sans-serif;}
+
+
+#header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    left:0; top:0;
+    color:#FF250F;
+    background:#FAE4C9;
+    font-family: 'Lobster', cursive;
+    border-bottom: 2px solid #FF250F;
+    z-index: 99;
+}
+#header > div{ position: relative;}
+#header .logo{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+#header .nav{
+    position: absolute;
+    bottom:8px; right: 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+#header .nav ul li{
+    display:inline-block;
+    padding-left: 50px;
+}
+
+.article1{ 
+    font-family: 'Lobster', cursive;
+    background: #FAE4C9;
+    background-size: cover;
+    height: 100vh;
+    color: #FF250F
+}
+
+.article1 .maintxt{
+    font-size: 130px;
+    position:absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.5;
+}
+.article1 .maintxt p{
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.subtxt h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #FF250F;
+    font-family: 'Lobster', cursive;
+    padding: 70px 0;
+}
+.article2, .article3{
+    padding-bottom: 70px;
+}
+
+/* About me */
+.article2 .image{
+    float: left;
+    margin-left: 200px;
+    margin-top: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+.article2 .image > p{
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 25px;
+    border: 5px solid #FF250F;
+}
+.article2 ul{
+    float:right;
+    margin-right: 90px;
+}
+.article2 h3{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.article2 p{
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    color: #666;    
+}
+
+/* Tool&Skill */
+.article3{
+    background:#f9f8f6;
+}
+
+/* Project */
+.article4{
+    background:#fff2e4;
+    padding-bottom: 40px;
+}
+
+.article4 li{ 
+    float: left;
+    width: 22%;
+    margin-right:4%;
+}
+.article4 li:nth-child(4n){
+    margin-right: 0;
+}
+.article4 ul li p{
+    text-align: center;
+    padding: 10px 0;
+    background: #FF250F;
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: 'Lobster', cursive;
+    border-radius: 0 0 10px 10px;
+}
+
