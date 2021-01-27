@@ -5,7 +5,7 @@
 /* font-family: 'Noto Sans', sans-serif; 영문 기본 글씨 */
 /* font-family: 'Noto Sans KR', sans-serif; 한글 기본 글씨 */
 .row{ max-width: 1200px; margin:0px auto; padding: 0 10px;}
-#header, #section, #footer{font-family: 'Noto Sans', sans-serif;}
+.article1, .article2, .article3, .article4 {font-family: 'Noto Sans', sans-serif;}
 
 
 #header{
@@ -35,7 +35,12 @@
     display:inline-block;
     padding-left: 50px;
 }
+#header .nav ul li:hover a{
+    color: #fff;
+}
 
+
+/* main */
 .article1{ 
     font-family: 'Lobster', cursive;
     background: #FAE4C9;
@@ -43,7 +48,6 @@
     height: 100vh;
     color: #FF250F
 }
-
 .article1 .maintxt{
     font-size: 130px;
     position:absolute;
@@ -58,29 +62,29 @@
     font-weight: bold;
     letter-spacing: 5px;
 }
-
 .subtxt h2{
     text-align: center;
     font-size: 40px;
     font-weight: 600;
     color: #FF250F;
     font-family: 'Lobster', cursive;
-    padding: 70px 0;
-}
-.article2, .article3{
-    padding-bottom: 70px;
+    padding: 90px 0 50px;
 }
 
+
 /* About me */
+.article2{
+    padding-bottom: 70px;
+}
 .article2 .image{
     float: left;
     margin-left: 200px;
-    margin-top: 15px;
+    margin-top: 45px;
     text-align: center;
     vertical-align: middle;
 }
 .article2 .image > p{
-    width: 200px; height: 200px;
+    width: 220px; height: 220px;
     border-radius: 50%;
     text-align: center;
     margin-bottom: 25px;
@@ -88,13 +92,14 @@
 }
 .article2 ul{
     float:right;
-    margin-right: 90px;
+    margin-right: 110px;
 }
 .article2 h3{
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 15px;
-    margin-top: 20px;
+    margin-top: 40px;
+    color: #222;
 }
 .article2 p{
     line-height: 1.5;
@@ -103,31 +108,139 @@
     color: #666;    
 }
 
+
 /* Tool&Skill */
 .article3{
+    height: 100vh;
     background:#f9f8f6;
 }
+.article3 .skillcontainer{
+    height: calc(100% - 180px);
+    font-size: 20px;
+}
+.article3 .skillcontainer > div{
+    width: 100%; height: 13%;
+    /* border: 1px solid #333; */
+    position: relative;
+}
+.article3 .skillcontainer > div > p{
+    position: absolute;
+    left:0; top: 50%;
+    transform: translateY(-50%);
+    color: #222;
+    font-weight: bold;
+}
+.article3 .skillcontainer .score{
+    width: calc(100% - 150px); height: 60%;
+    background: #FAE4C9;
+    position: absolute;
+    left: 150px; top: 50%; 
+    transform: translateY(-50%);
+    border-radius: 50px;
+    overflow: hidden;
+}
+.article3 .skillcontainer .score .myscore{
+    height:100%;
+    border-radius: 50px;
+    background: linear-gradient(to right,#FAE4C9, #FF250F);
+    font-family: 'Lobster', cursive;
+}
+.article3 .skillcontainer .score .myscore span{
+    position: absolute;
+    top:50%; right: 5%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.article3 .skillcontainer .illust .myscore{
+    position: relative; 
+    width:0;
+    animation: illustani 1.5s both 0s;
+}
+.article3 .skillcontainer .photoshop .myscore{
+    position: relative; 
+    width:0;
+    animation: photoshopani 1.5s both 0.2s;
+}
+.article3 .skillcontainer .rhino .myscore{
+    position: relative; 
+    width:0;
+    animation: rhinoani 1.5s both 0.4s;
+}
+.article3 .skillcontainer .html .myscore{
+    position: relative; 
+    width:0;
+    animation: htmlani 1.5s both 0.6s;
+}
+.article3 .skillcontainer .css .myscore{
+    position: relative; 
+    width:0;
+    animation: cssani 1.5s both 0.8s;
+}
+.article3 .skillcontainer .java .myscore{
+    position: relative; 
+    width:0;
+    animation: javaani 1.5s both 1.0s;
+}
+.article3 .skillcontainer .jquery .myscore{
+    position: relative; 
+    width:0;
+    animation: jqueryani 1.5s both 1.2s;
+}
+
+@keyframes illustani{
+    0%{width: 0; opacity: 0;}
+    100%{width: 90%; opacity: 1;}
+}
+@keyframes photoshopani{
+    0%{width: 0; opacity: 0;}
+    100%{width: 80%; opacity: 1;}
+}
+@keyframes rhinoani{
+    0%{width: 0; opacity: 0;}
+    100%{width: 70%; opacity: 1;}
+}
+@keyframes htmlani{
+    0%{width: 0; opacity: 0;}
+    100%{width: 60%; opacity: 1;}
+}
+@keyframes cssani{
+    0%{width: 0; opacity: 0;}
+    100%{width: 50%; opacity: 1;}
+}
+@keyframes javaani{
+    0%{width: 0; opacity: 0;}
+    100%{width: 40%; opacity: 1;}
+}
+@keyframes jqueryani{
+    0%{width: 0; opacity: 0;}
+    100%{width: 30%; opacity: 1;}
+}
+
 
 /* Project */
 .article4{
-    background:#fff2e4;
-    padding-bottom: 40px;
+    background:#fdf1e4;
+    height: 100vh;
 }
-
+.article4 ul{
+    height: calc(100% - 180px);
+}
 .article4 li{ 
     float: left;
-    width: 22%;
-    margin-right:4%;
+    width: 23%;
+    margin-right: 2.5%;
+    margin-bottom: 20px;  
+    padding:10px 0;
 }
 .article4 li:nth-child(4n){
-    margin-right: 0;
+    margin-right:0;
 }
 .article4 ul li p{
     text-align: center;
     padding: 10px 0;
     background: #FF250F;
     color: #fff;
-    margin-bottom: 30px;
     font-family: 'Lobster', cursive;
     border-radius: 0 0 10px 10px;
 }
