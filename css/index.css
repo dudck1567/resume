@@ -228,13 +228,10 @@
 }
 .article4 li{ 
     float: left;
-    width: 23%;
-    margin-right: 2.5%;
-    margin-bottom: 20px;  
-    padding:10px 0;
-}
-.article4 li:nth-child(4n){
-    margin-right:0;
+    width: 25%;
+    height: 47%;
+    overflow: hidden;
+    padding: 20px 10px; 
 }
 .article4 ul li p{
     text-align: center;
