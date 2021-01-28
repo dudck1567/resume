@@ -36,6 +36,9 @@
     padding-left: 50px;
 }
 #header .nav ul li:hover a{
+    transition: all 0.3s;
+}
+#header .nav ul li:hover a{
     color: #fff;
 }
 
@@ -55,6 +58,9 @@
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1.5;
+}
+.article1 .maintxt h1{
+    animation: pulse 2s both 0s infinite ease-in-out;
 }
 .article1 .maintxt p{
     font-size: 20px;
@@ -88,7 +94,7 @@
     border-radius: 50%;
     text-align: center;
     margin-bottom: 25px;
-    border: 5px solid #FF250F;
+    border: 5px solid #ffc222;
 }
 .article2 ul{
     float:right;
@@ -100,6 +106,13 @@
     margin-bottom: 15px;
     margin-top: 40px;
     color: #222;
+    border-left: 7px solid #ffc222;
+    padding-left:15px;
+    border-radius: 3px;
+}
+.article2 .image div:nth-of-type(1) h3{
+    border-left: none;
+    padding-left:0;
 }
 .article2 p{
     line-height: 1.5;
@@ -116,7 +129,8 @@
 }
 .article3 .skillcontainer{
     height: calc(100% - 180px);
-    font-size: 20px;
+    font-size: 18px;
+    padding: 0 20px;
 }
 .article3 .skillcontainer > div{
     width: 100%; height: 13%;
@@ -129,9 +143,12 @@
     transform: translateY(-50%);
     color: #222;
     font-weight: bold;
+    border-left: 7px solid #ffc222;
+    padding-left: 15px;
+    border-radius: 3px;
 }
 .article3 .skillcontainer .score{
-    width: calc(100% - 150px); height: 60%;
+    width: calc(100% - 150px); height: 55%;
     background: #FAE4C9;
     position: absolute;
     left: 150px; top: 50%; 
@@ -242,3 +259,84 @@
     border-radius: 0 0 10px 10px;
 }
 
+/* contact me */
+.article5 legend{
+    display:none;
+}
+.article5{
+    background: #FAE4C9;
+    padding-bottom: 50px;
+}
+.form1{
+    width:70%;
+    /* border: 1px solid #ddd; */
+    margin: 0 auto;
+}
+.form1 p{
+    padding: 15px 0;
+}
+.form1 p:nth-of-type(4) label{
+    vertical-align: top;
+    margin-top: 5px;
+}
+.form1 p label{
+    display: inline-block;
+    width : 14%;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+    border-left: 7px solid #ffc222;
+    padding-left: 15px;
+    border-radius: 3px;
+}
+.form1 p input{
+    border: none;
+    background: #fff;
+    border-radius: 50px;
+    padding: 15px 15px;
+    outline:none;
+}
+.form1 p textarea{
+    width:84%; height: 150px;
+    border:none;
+    border-radius: 30px;
+    padding: 20px 20px;
+    resize: none;
+    outline:none;
+}
+.form1 p:nth-of-type(5) input{
+    background: none;
+    border-radius: 0;
+    padding-left: 5px;
+}
+#contact .form1 p:nth-of-type(6){
+    text-align: center;
+}
+#contact .form1 p:nth-of-type(6) button{
+    padding: 15px 25px;
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 5px;
+    border-radius: 50px;
+    color: #fff;
+    border:0;
+    outline: none;
+    cursor: pointer;
+}
+#contact .form1 p:nth-of-type(6) button[type=submit]:hover{
+    background:#ffc222;
+}
+#contact .form1 p:nth-of-type(6) button[type=reset]:hover{
+    background: #ffc222;
+}
+#contact .form1 p:nth-of-type(6) button[type=submit]{
+    background: #FF250F;
+    transition: all 0.5s;
+}
+#contact .form1 p:nth-of-type(6) button[type=reset]{
+    background: #FF250F;
+    transition: all 0.5s;
+}
