@@ -103,16 +103,24 @@
 .article2 h3{
     font-weight: bold;
     font-size: 18px;
-    margin-bottom: 15px;
-    margin-top: 40px;
+    margin: 40px 0 15px;
+    padding-left: 30px;
     color: #222;
-    border-left: 7px solid #ffc222;
-    padding-left:15px;
-    border-radius: 3px;
+    position: relative;
+}
+.article2 h3::before{
+    content:'';
+    width:13px; height: 13px;
+    border:3px solid  #ffc222;
+    border-radius: 50%;
+    position: absolute;
+    top:1px; left:0px;
 }
 .article2 .image div:nth-of-type(1) h3{
-    border-left: none;
     padding-left:0;
+}
+.article2 .image div:nth-of-type(1) h3::before{
+    border:none;
 }
 .article2 p{
     line-height: 1.5;
@@ -143,9 +151,15 @@
     transform: translateY(-50%);
     color: #222;
     font-weight: bold;
-    border-left: 7px solid #ffc222;
-    padding-left: 15px;
-    border-radius: 3px;
+    padding-left: 30px;
+}
+.article3 .skillcontainer > div > p::before{
+content:'';
+width:13px; height: 13px;
+border:3px solid #ffc222;
+border-radius: 50%;
+position: absolute;
+top:1px; left:0;
 }
 .article3 .skillcontainer .score{
     width: calc(100% - 150px); height: 55%;
@@ -286,9 +300,16 @@
     font-size: 18px;
     font-family: 'Noto Sans KR', sans-serif;
     color: #222;
-    border-left: 7px solid #ffc222;
-    padding-left: 15px;
-    border-radius: 3px;
+    position: relative;
+    padding-left: 30px;
+}
+.form1 p label::before{
+    content:'';
+    width:13px; height: 13px;
+    border:3px solid #ffc222;
+    border-radius: 50%;
+    position: absolute;
+    top:1px; left:0px;
 }
 .form1 p input{
     border: none;
