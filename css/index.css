@@ -14,17 +14,20 @@
     height: 60px;
     left:0; top:0;
     color:#FF250F;
-    background:#FAE4C9;
+    background: #FAE4C9;
     font-family: 'Lobster', cursive;
     border-bottom: 2px solid #FF250F;
     z-index: 99;
+    padding: 0px 20px;
 }
-#header > div{ position: relative;}
+#header > div{ 
+    position: relative;
+
+}
 #header .logo{
     font-size: 30px;
     margin-top: 15px;
 }
-
 #header .nav{
     position: absolute;
     bottom:8px; right: 0;
@@ -44,13 +47,33 @@
 
 
 /* main */
-.article1{ 
-    font-family: 'Lobster', cursive;
-    background: #FAE4C9;
-    background-size: cover;
+.article1{
+    position: relative;
     height: 100vh;
-    color: #FF250F
+    border-bottom: 30px solid #FF250F;
+} 
+.article1 > div:last-child{ 
+    top:0; left:0; bottom:0; right:0;
+    position: absolute;
+    font-family: 'Lobster', cursive;
+    background:#FF250f;
+    z-index: 1;
+    overflow: hidden;
 }
+.article1 > div::after{
+    content:'';
+    position: absolute;
+    top:5%; left:10%; right:10%; bottom:0%;
+    border-radius: 50%;
+    background: #FAE4C9;
+    z-index: 2;
+    animation: ani 3s both 0.2s ease;
+}
+@keyframes ani{
+    0%{transform: scale(0);}
+    100%{transform: scale(2);}
+}
+
 .article1 .maintxt{
     font-size: 130px;
     position:absolute;
@@ -58,6 +81,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1.5;
+    color: #FF250f;
+    z-index: 3;
 }
 .article1 .maintxt h1{
     animation: pulse 2s both 0s infinite ease-in-out;
@@ -72,11 +97,10 @@
     text-align: center;
     font-size: 40px;
     font-weight: 600;
-    color: #FF250F;
     font-family: 'Lobster', cursive;
     padding: 90px 0 50px;
+    color:  #FF250f;
 }
-
 
 /* About me */
 .article2{
@@ -84,7 +108,7 @@
 }
 .article2 .image{
     float: left;
-    margin-left: 200px;
+    margin-left: 180px;
     margin-top: 45px;
     text-align: center;
     vertical-align: middle;
@@ -260,7 +284,7 @@ top:1px; left:0;
 .article4 li{ 
     float: left;
     width: 25%;
-    height: 47%;
+    height: 46%;
     overflow: hidden;
     padding: 20px 10px; 
 }
@@ -273,13 +297,32 @@ top:1px; left:0;
     border-radius: 0 0 10px 10px;
 }
 
+/* article5 image */
+.article5{
+    width: 100%; height: 40vh;
+    background: url(../image/candy.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment:fixed;
+    position: relative;
+}
+.article5::before{
+    content:'';
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: #FAE4C9;
+    opacity:0;
+}
+
+
 /* contact me */
-.article5 legend{
+.article6 legend{
     display:none;
 }
-.article5{
+.article6{
     background: #FAE4C9;
     padding-bottom: 50px;
+    border-top: 30px solid #FF250F;
+    border-bottom: 30px solid #FF250F;
 }
 .form1{
     width:70%;
@@ -355,9 +398,9 @@ top:1px; left:0;
 }
 #contact .form1 p:nth-of-type(6) button[type=submit]{
     background: #FF250F;
-    transition: all 0.5s;
+    transition: background 0.5s;
 }
 #contact .form1 p:nth-of-type(6) button[type=reset]{
     background: #FF250F;
-    transition: all 0.5s;
+    transition: background 0.5s;
 }
