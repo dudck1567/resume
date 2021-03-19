@@ -14,11 +14,17 @@
     height: 60px;
     left:0; top:0;
     color:#FF250F;
-    background: #FAE4C9;
     font-family: 'Lobster', cursive;
     border-bottom: 2px solid #FF250F;
     z-index: 99;
     padding: 0px 20px;
+    transition: all 0.5s;
+} 
+#header.on{
+    color:#FAE4C9;
+    background: #FF250F;
+    display: block;
+    transition: all 0.s; 
 }
 #header > div{ 
     position: relative;
@@ -36,7 +42,7 @@
 }
 #header .nav ul li{
     display:inline-block;
-    padding-left: 50px;
+    padding-left: 70px;
 }
 /* #header .nav ul li:hover a{
     transition: all 0.3s;
@@ -67,13 +73,15 @@
     position: absolute;
     top:5%; left:10%; right:10%; bottom:0%;
     border-radius: 50%;
-    background: #FAE4C9;
     z-index: 2;
-    animation: ani 3s both 0.2s ease;
+}
+.article1 > div.on::after{
+    animation: ani 3s both ease;
+    background: #FAE4C9;
 }
 @keyframes ani{
     0%{transform: scale(0);}
-    100%{transform: scale(2);}
+    100%{transform: scale(2);} 
 }
 
 .article1 .maintxt{
@@ -195,57 +203,72 @@ top:1px; left:0;
     transform: translateY(-50%);
     border-radius: 50px;
     overflow: hidden;
+
 }
 .article3 .skillcontainer .score .myscore{
     height:100%;
     border-radius: 50px;
     background: linear-gradient(to right,#FAE4C9, #FF250F);
     font-family: 'Lobster', cursive;
-}
-.article3 .skillcontainer .score .myscore span{
+    width: 0%;
     position: absolute;
-    top:50%; right: 5%;
-    transform: translateY(-50%);
+    text-align: right;
     color: #fff;
+    opacity:0;
+    padding: 15px 20px 0;
 }
-
 .article3 .skillcontainer .illust .myscore{
     position: relative; 
     width:0;
-    animation: illustani 1.5s both 0s;
 }
+/* .article3 .skillcontainer.on .illust .myscore{
+    animation: illustani 1.5s both 0s;
+} */
+
 .article3 .skillcontainer .photoshop .myscore{
     position: relative; 
     width:0;
-    animation: photoshopani 1.5s both 0.2s;
 }
+/* .article3 .skillcontainer.on .photoshop .myscore{
+    animation: photoshopani 1.5s both 0.2s;
+} */
 .article3 .skillcontainer .rhino .myscore{
     position: relative; 
     width:0;
-    animation: rhinoani 1.5s both 0.4s;
 }
+/* .article3 .skillcontainer.on .rhino .myscore{
+    animation: rhinoani 1.5s both 0.4s;
+} */
 .article3 .skillcontainer .html .myscore{
     position: relative; 
     width:0;
-    animation: htmlani 1.5s both 0.6s;
 }
+/* .article3 .skillcontainer.on .html .myscore{
+    animation: htmlani 1.5s both 0.6s;
+} */
 .article3 .skillcontainer .css .myscore{
     position: relative; 
     width:0;
-    animation: cssani 1.5s both 0.8s;
 }
+/* .article3 .skillcontainer.on .css .myscore{
+    animation: cssani 1.5s both 0.8s;
+} */
 .article3 .skillcontainer .java .myscore{
     position: relative; 
     width:0;
-    animation: javaani 1.5s both 1.0s;
 }
+/* .article3 .skillcontainer.on .java .myscore{
+    animation: javaani 1.5s both 1.0s;
+} */
 .article3 .skillcontainer .jquery .myscore{
     position: relative; 
     width:0;
-    animation: jqueryani 1.5s both 1.2s;
 }
+/* .article3 .skillcontainer.on .jquery .myscore{
+    animation: jqueryani 1.5s both 1.2s;
+} */
 
-@keyframes illustani{
+/* @keyframes illustani{
     0%{width: 0; opacity: 0;}
     100%{width: 90%; opacity: 1;}
 }
@@ -272,7 +295,7 @@ top:1px; left:0;
 @keyframes jqueryani{
     0%{width: 0; opacity: 0;}
     100%{width: 30%; opacity: 1;}
-}
+} */
 
 
 /* Project */
@@ -317,22 +340,36 @@ top:1px; left:0;
 
 
 /* contact me */
+/* .article6{height: 100vh;} */
 .article6 legend{
     display:none;
 }
-.article6{
+.article6 {
+    width: 100%;
+    display: table;
+}
+.article6 > div{
+    display: table-cell;
+    vertical-align: middle;
+}
+.article6 .subtxt h2{
+    padding-top:0;
+}
+.article6{height: 100vh;
     background: #FAE4C9;
-    padding-bottom: 50px;
     border-top: 30px solid #FF250F;
     border-bottom: 30px solid #FF250F;
 }
 .form1{
-    width:70%;
+    width:80%; 
     /* border: 1px solid #ddd; */
     margin: 0 auto;
 }
 .form1 p{
-    padding: 15px 0;
+    padding-bottom: 2.5%;
+}
+.form1 p:nth-of-type(6){
+    padding-bottom: 0%;
 }
 .form1 p:nth-of-type(4) label{
     vertical-align: top;
@@ -385,7 +422,6 @@ top:1px; left:0;
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0 5px;
     border-radius: 50px;
     color: #fff;
     border:0;
@@ -406,3 +442,25 @@ top:1px; left:0;
     background: #FF250F;
     transition: background 0.5s;
 }
+
+/* 시작 로딩 화면 */
+.introbox{
+    position: fixed;
+    top:0%; left:0%; bottom:0%; right:0%;
+    background: #FF250F;
+    z-index:9999;
+
+} 
+
+.introbox i{
+    font-size:60px;
+    position:absolute;
+    color:#FAE4C9;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    animation: spin 1.2s ease-in-out infinite;
+}
+@keyframes spin{
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+} 
