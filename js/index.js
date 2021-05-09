@@ -1,7 +1,7 @@
 // 시작 로딩 화면 
 $(window).on('load', function(){
     setTimeout(function(){
-        $('.introbox').fadeOut(300, function(){
+        $('.introbox').fadeOut(100, function(){
             $('.article1 > div').addClass('on')
         }) 
     }, 2200)
@@ -56,21 +56,21 @@ $(window).on('scroll', function(){
 })
 
 // 퍼센트 
-function draw(percent, cname){
-    var count = 0;
-    var stop = setInterval(function(){
-        count++
-        if(count<=percent){
-            $(cname).find('.myscore').text(count+'%').css({
-                width:count+'%',
-                opacity:1,
-            })
-        }else{
-            clearInterval(stop)
-            return false
-        }
-    }, 15)
-}
+// function draw(percent, cname){
+//     var count = 0;
+//     var stop = setInterval(function(){
+//         count++
+//         if(count<=percent){
+//             $(cname).find('.myscore').text(count+'%').css({
+//                 width:count+'%',
+//                 opacity:1,
+//             })
+//         }else{
+//             clearInterval(stop)
+//             return false
+//         }
+//     }, 15)
+// }
 
 $(window).on('scroll', function(){
     var sct = $(this).scrollTop()
@@ -95,33 +95,39 @@ $(window).on('scroll', function(){
     if(sct>=skillNearAni && sct<projectNear){
         if(!$('.skillcontainer').hasClass('on')){
             $('.skillcontainer').addClass('on')
-            draw(90,'.illust')
-            draw(80,'.photoshop') 
-            draw(70,'.rhino')
-            draw(60,'.html')
-            draw(50,'.css')
-            draw(40,'.java')
-            draw(30,'.jquery')
+            // draw(90,'.illust')
+            // draw(80,'.photoshop') 
+            // draw(70,'.rhino')
+            // draw(60,'.html')
+            // draw(50,'.css')
+            // draw(40,'.java')
+            // draw(30,'.jquery')
             }
     }else{
         $('.skillcontainer').removeClass('on')
-        $('.skillcontainer').find('.myscore').css({
-            width:'0%',
-            opacity:'0' 
-        })
+        // $('.skillcontainer').find('.myscore').css({
+        //     width:'0%',
+        //     opacity:'0' 
+        // })
     }
 })
 
-// article3 애니메이션 //
-// var article3Near = $('.article3').offset().top - (wh / 3 * 2 )
-// $(window).on('scroll', function(){
-//     if(sct>article3Near && !$('.article3').hasCalss('on')){
-//         $('.article3').addClass('on')
-//     } else if(sct===0){
-//         $('.article3').removeClass('on')
-//     }
-// })
-
-
 //article4
+
+$('.image .second').on('click', function(){
+    $(this).removeClass('on')
+    $(this).siblings().addClass('on')
+ });
+
+// article3 애니메이션
+var article3Near = $('.article3').offset().top - (wh / 2 )
+$(window).on('scroll', function(){
+    if(sct>article3Near && !$('.article3').hasCalss('on')){
+        $('.article3').addClass('on')
+    } else if(sct===0){
+        $('.article3').removeClass('on')
+    }
+})
+
+
 
