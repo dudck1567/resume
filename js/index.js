@@ -119,6 +119,16 @@ $('.image .second').on('click', function(){
     $(this).siblings().addClass('on')
  });
 
+ $('.image .first').on('click', function(){
+    $(this).removeClass('on')
+    $(this).parents().find('.projectBox').addClass('on')
+ });
+
+ $('.icon').on('click', function(){
+    $(this).parent().removeClass('on')
+    $(this).parent().next().find('.second').addClass('on')
+ });
+
 // article3 애니메이션
 var article3Near = $('.article3').offset().top - (wh / 2 )
 $(window).on('scroll', function(){
