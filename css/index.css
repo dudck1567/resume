@@ -123,11 +123,10 @@
     text-align: center;
     vertical-align: middle;
 }
-.article2 .image > p{
+.article2 .image img{
     width: 220px; height: 220px;
     border-radius: 50%;
     text-align: center;
-    margin-bottom: 25px;
     border: 5px solid #ffc222;
 }
 .article2 ul{
