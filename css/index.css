@@ -132,11 +132,14 @@
 .article2 ul{
     float:right;
     margin-right: 110px;
+    margin-top:15px;
 }
 .article2 h3{
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
     font-weight: bold;
-    font-size: 18px;
-    margin: 40px 0 15px;
+    font-size: px;
+    margin: 30px 0 15px;
     padding-left: 30px;
     color: #222;
     position: relative;
@@ -230,53 +233,53 @@ top:1px; left:0;
     animation: photoshopani 1.5s both 0.2s;
 }
 
-.article3 .skillcontainer.on .rhino .myscore{
-    animation: rhinoani 1.5s both 0.4s;
-}
-
 .article3 .skillcontainer.on .html .myscore{
-    animation: htmlani 1.5s both 0.6s;
+    animation: htmlani 1.5s both 0.4s;
 }
 
 .article3 .skillcontainer.on .css .myscore{
-    animation: cssani 1.5s both 0.8s;
+    animation: cssani 1.5s both 0.6s;
 }
 
 .article3 .skillcontainer.on .java .myscore{
-    animation: javaani 1.5s both 1.0s;
+    animation: javaani 1.5s both 0.8s;
 }
 
 .article3 .skillcontainer.on .jquery .myscore{
-    animation: jqueryani 1.5s both 1.2s;
+    animation: jqueryani 1.5s both 1.0s;
+}
+
+.article3 .skillcontainer.on .react .myscore{
+    animation: reactani 1.5s both 1.2s;
 }
 
 @keyframes illustani{
     0%{width: 0; opacity: 0;}
-    100%{width: 90%; opacity: 1;}
+    100%{width: 91%; opacity: 1;}
 }
 @keyframes photoshopani{
     0%{width: 0; opacity: 0;}
-    100%{width: 80%; opacity: 1;}
-}
-@keyframes rhinoani{
-    0%{width: 0; opacity: 0;}
-    100%{width: 70%; opacity: 1;}
+    100%{width: 86%; opacity: 1;}
 }
 @keyframes htmlani{
     0%{width: 0; opacity: 0;}
-    100%{width: 60%; opacity: 1;}
+    100%{width: 80%; opacity: 1;}
 }
 @keyframes cssani{
     0%{width: 0; opacity: 0;}
-    100%{width: 50%; opacity: 1;}
+    100%{width: 72%; opacity: 1;}
 }
 @keyframes javaani{
     0%{width: 0; opacity: 0;}
-    100%{width: 40%; opacity: 1;}
+    100%{width: 58%; opacity: 1;}
 }
 @keyframes jqueryani{
     0%{width: 0; opacity: 0;}
-    100%{width: 30%; opacity: 1;}
+    100%{width: 64%; opacity: 1;}
+}
+@keyframes reactani{
+    0%{width: 0; opacity: 0;}
+    100%{width: 55%; opacity: 1;}
 }
 
 
@@ -327,6 +330,15 @@ top:1px; left:0;
     margin-top:20px;
     border-radius: 20px;
 }
+
+
+.article4 .projectPic li:nth-child(2) img.on{opacity: 1; transition: all 0.5s; position:absolute; top:0; left:0;}
+.article4 .projectPic li:nth-child(2) img{opacity: 0; transition: all 0.5s;}
+.article4 .projectBox ul li:hover img.on{opacity: 0;}
+.article4 .projectBox ul li:hover img{opacity: 1;}
+
+
+
 .article4 .projectBox ul li .projectImg{
     width:100%;
     transition: all 0.3s;

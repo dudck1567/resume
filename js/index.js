@@ -129,6 +129,8 @@ $('.image .second').on('click', function(){
     $(this).parent().next().find('.second').addClass('on')
  });
 
+ 
+
 // article3 애니메이션
 var article3Near = $('.article3').offset().top - (wh / 2 )
 $(window).on('scroll', function(){
