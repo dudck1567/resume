@@ -332,8 +332,10 @@ top:1px; left:0;
 }
 
 
-.article4 .projectPic li:nth-child(2) img.on{opacity: 1; transition: all 0.5s; position:absolute; top:0; left:0;}
-.article4 .projectPic li:nth-child(2) img{opacity: 0; transition: all 0.5s;}
+.article4 .projectPic li:nth-child(2) img.on, .article4 .projectPic li:nth-child(3) img.on
+{opacity: 1; transition: all 0.5s; position:absolute; top:0; left:0;}
+.article4 .projectPic li:nth-child(2) img, .article4 .projectPic li:nth-child(3) img
+{opacity: 0; transition: all 0.5s;}
 .article4 .projectBox ul li:hover img.on{opacity: 0;}
 .article4 .projectBox ul li:hover img{opacity: 1;}
 
